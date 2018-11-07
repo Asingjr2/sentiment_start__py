@@ -1,0 +1,60 @@
+<!-- <html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>REDIS SAMUS FILTER</h1>
+    <p>THIS IS ALL ABOUT MY FAVORITE SMASH BROTHER MELEE CHARACTER</p>
+</body>
+</html> -->
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <title>DTC-Twitter Filter</title>
+  </head>
+  <body>
+    <div class="container">
+
+      <div class="row mb-5">
+        <div class="col text-center">
+          <h1 class="mb-3">
+            DTC-Twitter Filter
+          </h1>
+          <h4 class="mb-2">
+            <small class="text-muted">
+              Football
+            </small>
+          </h4>
+        </div>
+      </div>
+
+      {% for tweet in tweets %}
+        {{ tweet}}
+        {% for k,v in tweet.iteritems %}
+        <p>{{ k }} : {{ v }}</p>
+        <p>{{ tweet }}</p>
+        {% endfor %}
+      {% endfor %}
+
+      <div class="text-center mb-4">
+        <a class="btn btn-primary" href="/" role="button">Refresh</a>
+      </div>
+
+
+    </div>
+  </body>
+</html>
